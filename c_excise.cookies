@@ -1,0 +1,14 @@
+#includes <stdio.h>
+void fortunes_cookies(char *msg)
+{
+  printf("Message reads: %s.\n", msg);
+  printf("Msg ocuppies %lu bytes.\n", sizeof(msg));
+}
+int main()
+{
+  char quote[] = "Cookies make you fat";
+  printf("This quote occupies %lu bytes.\n", sizeof(quote));
+  printf("This quote is stored in %p.\n", quote);
+  fortune_cookie(quote);
+  return 0;
+}
