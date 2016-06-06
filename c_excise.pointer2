@@ -1,0 +1,26 @@
+#include <stdio.h>
+int sumAndminus(int v1, int v2, int *p){
+   *p = v1 - v2;
+   return v1 + v2;
+}
+int main(){
+  int a = 8;
+  int b = 6;
+  int sum;
+  int minus;
+  sumAndminus(a, b, &minus);
+  print("sum is %d, minus is %d.\n", sum, minus);
+  return 0;
+}
+
+void south_east(int *lat, int *lon){
+  *lat = *lat - 1;
+  *lon = *lon + 1;
+}
+int main(){
+  int latitude = 36;
+  int longitude = 72;
+  south_east(&latitude, &longitude);
+  printf("Stop!The position now is [%d,%d].\n", latitude, longitude);
+  return 0;
+}
