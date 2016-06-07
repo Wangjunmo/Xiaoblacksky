@@ -1,0 +1,28 @@
+#include <stdio.h>
+int sum(int a, int b){
+  return a + b;
+}
+int minus(int a, int b){
+  return a - b;
+}
+int mul(int a, int b ){
+  return a * b;
+}
+int count(int a, int b, int (*p)(int, int)){
+  return p(a, b);
+}
+int main(){
+    int a;
+    int b;
+    do{puts("Pls input your numbers:");
+    scanf("%d,%d", &a, &b);
+    int result1 = count(a, b, mul);
+    int result2 = count(a, b, minus);
+    int result3 = count(a, b, sum);
+    printf("The result1 is: %d.\n", result1);
+    printf("The result2 is: %d.\n", result2);
+    printf("The result3 is: %d.\n", result3);
+    }while (a != '0' );{
+        return 0;
+    }
+}
