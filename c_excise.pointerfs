@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+char topic[][80] = {
+    "Ranking data of Amazon",
+    "Products ranking in Rakuten",
+    "Alipay data",
+    "Vegetable production in Japan",
+};
+
+void com_sim(char *com){
+    int i;
+    for (i = 0; i < 5; i ++) {
+        if(strstr(topic[i], com)){
+            printf("Find the similarity in topic %i: '%s'.\n", i + 1, topic[i]);
+        }
+    }
+}
+int main(){
+    char com[80];
+    do{
+        puts("Pls imput the object:");
+        fgets(com, 80, stdin);
+        com[strlen(com) - 1] = '\0';
+        com_sim(com);
+    }while(strcmp(com, "esc"));{
+        return 0;
+
+         }
+}
