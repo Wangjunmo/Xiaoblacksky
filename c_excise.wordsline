@@ -1,0 +1,21 @@
+＃include <stdio.h>
+#include <string.h>
+void words_line(char *s){
+  for(; *s != '\0'; s ++){
+    if(*s == ' '){
+      *s = '\n';
+      printf("%c", *s);
+    }
+    else
+      printf("%c", *s);
+  }
+  puts("");
+}
+int main(){
+  char c[80];
+  puts("Pls input your words");
+  fgets(c, 80, stdin);
+  c[strlen(c) - 1] = '\0';
+  words_line(c);
+  return 0;
+}
