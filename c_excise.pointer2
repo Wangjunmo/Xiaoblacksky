@@ -8,7 +8,7 @@ int main(){
   int b = 6;
   int sum;
   int minus;
-  sumAndminus(a, b, &minus);
+  sum = sumAndminus(a, b, &minus);
   print("sum is %d, minus is %d.\n", sum, minus);
   return 0;
 }
